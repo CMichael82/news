@@ -5,14 +5,17 @@ var Schema = mongoose.Schema;
 var ArticleSchema = new Schema ({
 	headline: {
 		type: String,
+		trim: true,
 		required: true
 	},
 	summary: {
 		type: String,
+		trim: true,
 		required: true
 	},
 	link: {
 		type:String,
+		trim: true,
 		required: true
 	},
 	comments: {
