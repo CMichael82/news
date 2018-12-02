@@ -1,0 +1,23 @@
+body {
+	background: url("/images/table.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+h1 {
+	text-align: center;
+	color: whitesmoke;
+	text-shadow: 4px 3px #B39C6F;
+}
+
+#articles {
+	display: inline-block;
+	overflow: auto;
+	width: 60%;
+	height: 700px;
+}
+
+#notes {
+	float: right;
+	width: 30%;
+}
