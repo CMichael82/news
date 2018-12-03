@@ -1,8 +1,8 @@
-var mongoose = require ('mongoose');
+var mongoose = require('mongoose');
 
 var Schema = mongoose.Schema;
 
-var ArticleSchema = new Schema ({
+var ArticleSchema = new Schema({
 	headline: {
 		type: String,
 		trim: true,
@@ -14,9 +14,13 @@ var ArticleSchema = new Schema ({
 		required: true
 	},
 	link: {
-		type:String,
+		type: String,
 		trim: true,
 		required: true
+	},
+	timestamp: {
+		type: Date,
+		default: Date.now
 	},
 	comments: {
 		type: Schema.Types.ObjectId,

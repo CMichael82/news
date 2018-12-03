@@ -1,5 +1,28 @@
 <div class="container">
-	<h1>The Newsstand</h1>
-	<div id="articles"></div>
-	<div id="notes"></div>
+	<h1>Your Newsstand</h1>
+	<div id="articles">
+		<div id="navButtons">
+			<button id="scrapeBtn" class='btn cyan darken-4 white-text'>Scrape Articles</button>
+			<button id="viewSaved" class='btn cyan darken-4 white-text'>Saved Articles</button>
+		</div>
+		<table id="results">
+			<thead>
+				<tr>
+					<th>ARTICLE #</th>
+					<th>HEADLINE</th>
+					<th>SUMMARY</th>
+					<th>COMMENT</th>
+					<th>SAVE</th>
+					<th>LINK</th>
+				</tr>
+			</thead>
+			<tbody>
+	</div>
+	{{!-- <div id="notes"></div> --}}
 </div>
+
+{{> modal/comment}}
+
+
+
+

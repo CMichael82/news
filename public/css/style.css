@@ -2,6 +2,8 @@ body {
 	background: url("/images/table.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
+	font-family: 'Courier New', Courier, monospace;
+	color: #303F46 ;
 }
 
 h1 {
@@ -11,13 +13,59 @@ h1 {
 }
 
 #articles {
+	background-color: #E6E6E6;
 	display: inline-block;
 	overflow: auto;
-	width: 80%;
+	/* width: 70%; */
 	height: 700px;
+	padding: 50px;
+	opacity: .75;
+}
+
+#navButtons {
+	display: flex;
+	justify-content: center;
+}
+
+#scrapeBtn, #viewSaved {
+	margin: 20px;
+}
+
+button {
+	padding: 5px;
+}
+
+th {
+	text-align: center;
+}
+
+td {
+	padding: 10px;
+	text-align: center;
+}
+
+a {
+	margin-top: 50px;
+	color: #0097a7 ;
+}
+
+#headline {
+	font-weight: bold;
+}
+
+#commentModal{
+	margin-top: 50px;
+	background-color: rgb(3, 32, 46);
+	color: whitesmoke;
+}
+
+#bodyInput, #titleInput {
+	color: whitesmoke;
 }
 
 #notes {
-	float: right;
-	width: 20%;
+	background-color: #eee;
+	overflow: auto;
+	/* float: right; */
+	/* width: 20%; */
 }

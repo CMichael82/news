@@ -1,0 +1,15 @@
+<!-- Comment MODAL -->
+<div class='modal' id='commentModal'>
+	<form action="/comment" method="post">
+		<div class='modal-content'>
+			<a class='modal-close right white-text'><i class='material-icons small'>close</i></a>
+			<h5 id="commentHeader" class="center"></h5>
+			<input type='text' name='title' class='form-control' id='titleInput' placeholder='Title Your Comment...'>
+			<textarea name='body' id="bodyInput" class="materialize-textarea" placeholder='Type your comment...'></textarea>
+		</div>
+		<div class='modal-footer'>
+			<button class='btn cyan darken-4 white-text' data-id='" + data._id + "' id='saveComment'>Save</button>
+		</div>
+	</form>
+</div>
+<!-- Comment MODAL- END -->
