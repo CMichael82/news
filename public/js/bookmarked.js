@@ -3,6 +3,7 @@ $(document).ready(function () {
 	var $home = $('#home');
 	var $saveComment = $('#saveComment');
 	var $removeArticle = $('#removeArticle');
+	var $deleteComment = $('#deleteComment');
 
 	function returnHome() {
 		window.location = '/';
@@ -51,6 +52,7 @@ $(document).ready(function () {
 				$('#noteTitle').html(data.note.title),
 					$('#noteBody').html(data.note.body),
 					$('#articleTitle').text(data.headline);
+					$('#deleteComment').attr('data-id', data.note._id);
 			});
 	}
 
@@ -65,6 +67,17 @@ $(document).ready(function () {
 			})
 	}
 
+	function deleteComment(){
+		var thisId = $(this).attr("data-id");
+		$.ajax({
+			method: "DELETE",
+			url: "/deleteComment/" + thisId,
+		})
+		.then(function(data){
+			console.log("Comment Deleted!");
+		})
+	}
+
 	$viewCommentBtn.modal();
 	$('.modal').modal();
 	$home.on('click', returnHome);
@@ -72,4 +85,6 @@ $(document).ready(function () {
 	$saveComment.on('click', saveComment);
 	$viewCommentBtn.on('click', viewComments);
 	$removeArticle.on('click', removeBookmark);
+	$deleteComment.on('click', deleteComment);
+
 });

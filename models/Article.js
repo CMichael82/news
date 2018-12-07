@@ -18,7 +18,7 @@ var ArticleSchema = new Schema({
 		trim: true,
 		required: true
 	},
-	timestamp: {
+	date: {
 		type: Date,
 		default: Date.now
 	},

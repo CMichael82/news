@@ -89,6 +89,21 @@ module.exports = function (app) {
 			});
 	});
 
+	app.delete("/deleteComment/:id", function(req, res){
+		db.Note.remove({
+			_id: req.params.id
+		})
+		.then(function(dbDelted){
+			console.log("Deleted COmment", dbDelted);
+		})
+		.catch(function(err){
+			res.json(err);
+		});
+	});
+
+
+
+
 	// ///////////////FIND AN ARTICLE AND IT'S RELATED COMENTS//////////
 	app.get("/comments/:id", function (req, res) {
 		console.log("Comments Req.Params", req.params.id);
