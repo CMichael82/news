@@ -1,0 +1,45 @@
+<div class="container">
+	<h1>Your Saved Articles</h1>
+	<div id="articles">
+		<div id="navButtons">
+			<button id="home" class='btn cyan darken-4 white-text'>Back</button>
+		</div>
+		<table id="results">
+			<thead>
+				<tr>
+					<th>HEADLINE</th>
+					<th>SUMMARY</th>
+					<th>LINK</th>
+					<th>ADD COMMENT</th>
+					<th>VIEW COMMENT</th>
+					<th>REMOVE</th>
+				</tr>
+			</thead>
+			<tbody>
+				{{#each bookmarked}}
+				<tr>
+					<td id='headline'>{{this.headline}}</td>
+					<td id='summary'> {{this.summary}}</td>
+					<td>
+						<a href="https://www.bbc.com/{{this.link}}" target="_blank">BBC News</a>
+					</td>
+					<td>
+						<button class='modal-trigger blue-grey lighten-3 white-text' id="commentBtn" data-id="{{this._id}}" data-target="commentModal">Add
+							A Comment</button>
+					</td>
+					<td>
+						<button class='modal-trigger blue-grey lighten-3 white-text' id="viewCommentBtn" data-id="{{this._id}}"
+						 data-target="viewCommentsModal">View Comment</button>
+					</td>
+					<td>
+						<button class='red-text' id="removeArticle" data-id="{{this._id}}">X</button>
+					</td>
+				</tr>
+				{{/each}}
+	</div>
+</div>
+
+{{> modal/comment-modal}}
+{{> modal/view-comments}}
+
+<script src="/js/bookmarked.js"></script>

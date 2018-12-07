@@ -12,7 +12,7 @@ h1 {
 	text-shadow: 4px 3px #B39C6F;
 }
 
-#articles {
+#articles, #savedArticles {
 	background-color: #E6E6E6;
 	display: inline-block;
 	overflow: auto;
@@ -22,12 +22,12 @@ h1 {
 	opacity: .75;
 }
 
-#navButtons {
+#navButtons, #backButton {
 	display: flex;
 	justify-content: center;
 }
 
-#scrapeBtn, #viewSaved {
+#scrapeBtn, #viewSaved, #home {
 	margin: 20px;
 }
 

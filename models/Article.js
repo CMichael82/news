@@ -22,9 +22,13 @@ var ArticleSchema = new Schema({
 		type: Date,
 		default: Date.now
 	},
-	comments: {
-		type: Schema.Types.ObjectId,
-		ref: 'Comment'
+	note: {
+    type: Schema.Types.ObjectId,
+    ref: "Note"
+  },
+	saved: {
+		type: Boolean,
+		default: false
 	}
 });
 

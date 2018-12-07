@@ -1,0 +1,31 @@
+<!-- Comment MODAL -->
+<div class='modal' id='viewCommentsModal'>
+	<form>
+		<div class='modal-content'>
+			<a class='modal-close right green-text'><i class='material-icons small'>close</i></a>
+			<h4 class="center">COMMENTS ON</h4>
+			<h5 class="center" id="articleTitle"></h5>
+			<br> <br>
+			<h6 class="center" id="noteTitle"></h6>
+			<p class="center" id="noteBody"></p>
+			{{!-- <div class="modal-body">
+				<table>
+					<thead>
+					</thead>
+					<tbody class="table">
+						<tr>
+							<td id="noteTitle"></td>
+							<td id="noteBody"></td>
+						</tr>
+					</tbody>
+				</table> --}}
+
+				{{dbArticle}}
+
+			</div>
+			<div class='modal-footer'>
+				<button class='btn cyan darken-4 white-text' id='deleteComment'>Delete</button>
+			</div>
+	</form>
+</div>
+<!-- Comment MODAL- END -->

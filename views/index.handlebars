@@ -3,26 +3,32 @@
 	<div id="articles">
 		<div id="navButtons">
 			<button id="scrapeBtn" class='btn cyan darken-4 white-text'>Scrape Articles</button>
-			<button id="viewSaved" class='btn cyan darken-4 white-text'>Saved Articles</button>
+			<button id="viewSaved" class='btn cyan darken-4 white-text'>Bookmarked Articles</button>
 		</div>
-		<table id="results">
+		<table>
 			<thead>
 				<tr>
-					<th>ARTICLE #</th>
 					<th>HEADLINE</th>
 					<th>SUMMARY</th>
-					<th>COMMENT</th>
 					<th>SAVE</th>
 					<th>LINK</th>
 				</tr>
 			</thead>
-			<tbody>
+			<tbody id="results">
+
+				{{#each article}}
+				<tr>
+					<td id='headline'>{{this.headline}}</td>
+					<td id='summary'> {{this.summary}}</td>
+					<td>
+						<button class='blue-grey lighten-3 white-text' id="saveBtn" data-id="{{this._id}}">Bookmark Article</button>
+					</td>
+					<td>
+						<a href="https://www.bbc.com/{{this.link}}" target="_blank">BBC News</a>
+					</td>
+				</tr>
+				{{/each}}
 	</div>
-	{{!-- <div id="notes"></div> --}}
 </div>
 
-{{> modal/comment}}
-
-
-
-
+<script src="/js/index.js"></script>
