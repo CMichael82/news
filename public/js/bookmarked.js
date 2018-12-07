@@ -82,8 +82,8 @@ $(document).ready(function () {
 	$('.modal').modal();
 	$home.on('click', returnHome);
 	$('body').on('click', '#commentBtn', openCommentModal);
-	$saveComment.on('click', saveComment);
-	$viewCommentBtn.on('click', viewComments);
+	$('body').on('click', '#saveComment', saveComment);
+	$('body').on('click', '#viewCommentBtn', viewComments);
 	$removeArticle.on('click', removeBookmark);
 	$deleteComment.on('click', deleteComment);
 

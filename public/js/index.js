@@ -7,7 +7,7 @@ $(document).ready(function () {
 			method: "GET",
 			url: "/scrape"
 		}).then(function () {
-			alert('Scrape Completed');
+			console.log('Scrape Completed');
 			location.reload();
 		});;
 	};
@@ -20,8 +20,7 @@ $(document).ready(function () {
 				url: "/saved/" + thisId
 			})
 			.then(function (data) {
-				console.log(data);
-				alert("Article Saved!");
+				console.log("Article Saved!", data);
 				window.location = '/bookmarked';
 			})
 	}
